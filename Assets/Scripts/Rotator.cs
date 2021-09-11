@@ -6,10 +6,12 @@ using UnityEngine.Events;
 public class Rotator : MonoBehaviour
 {
     private event UnityAction Spin;
+
     void OnEnable()
     {
         Spin += OnSpin;
     }
+
     void Update()
     {
         Spin?.Invoke();

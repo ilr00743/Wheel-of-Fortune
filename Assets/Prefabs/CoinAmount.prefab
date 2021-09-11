@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3672471944355532038}
   - component: {fileID: 3672471944355532153}
   - component: {fileID: 8224415969582611394}
+  - component: {fileID: 443556292960389499}
   m_Layer: 0
   m_Name: CoinAmount
   m_TagString: Untagged
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -167,6 +168,19 @@ PolygonCollider2D:
       - {x: -0.72171426, y: -0.40390357}
       - {x: 0.85391957, y: -0.16960967}
       - {x: 0.89622504, y: 0.09919129}
+--- !u!114 &443556292960389499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3672471944355532155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a069267fa2f0284fa223758c8469ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _quantityText: {fileID: 3672471944355532153}
 --- !u!1 &3672471945793006985
 GameObject:
   m_ObjectHideFlags: 0
