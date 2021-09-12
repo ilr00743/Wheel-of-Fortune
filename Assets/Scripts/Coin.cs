@@ -8,7 +8,7 @@ public class Coin : MonoBehaviour
     [SerializeField] private TMP_Text _quantityText;
     private int _quantity;
 
-    public int Quantity => _quantity;
+    public int GetQuantity() => _quantity;
 
     private void Start()
     {
@@ -19,5 +19,10 @@ public class Coin : MonoBehaviour
     {
         _quantity = Random.Range(10, 1000 + 1) * 100;
         _quantityText.text = _quantity.ToString();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log(this._quantity);
     }
 }

@@ -23,7 +23,7 @@ public class Rotator : MonoBehaviour
 
     void OnSpin()
     {
-        if(Input.anyKey)
+        if(Input.GetMouseButton(0))
             gameObject.transform.Rotate(0, 0, 1.5f);
     }
 }

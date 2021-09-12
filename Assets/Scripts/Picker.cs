@@ -4,13 +4,5 @@ using UnityEngine;
 
 public class Picker : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
 
-    void Update()
-    {
-        
-    }
 }
