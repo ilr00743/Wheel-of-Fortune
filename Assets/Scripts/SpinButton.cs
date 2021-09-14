@@ -7,6 +7,5 @@ public class SpinButton : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         _wheel.RotateWheel(true);
-
     }
 }

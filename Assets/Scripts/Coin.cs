@@ -6,7 +6,10 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [SerializeField] private TMP_Text _quantityText;
+    private Collider2D _coinCollider2D;
     private int _quantity;
+
+    public Collider2D Collider2D { get; }
 
     private void Start()
     {
@@ -19,8 +22,8 @@ public class Coin : MonoBehaviour
         _quantityText.text = _quantity.ToString();
     }
 
-    /*void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(this._quantity);
-    }*/
+        Debug.Log(_quantity);
+    }
 }
