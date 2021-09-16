@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _quantityText: {fileID: 3672471944355532153}
+  _wheel: {fileID: 0}
 --- !u!1 &3672471945793006985
 GameObject:
   m_ObjectHideFlags: 0

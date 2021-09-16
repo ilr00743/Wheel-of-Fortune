@@ -6,13 +6,18 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [SerializeField] private TMP_Text _quantityText;
-    private Collider2D _coinCollider2D;
+    [SerializeField] private Wheel _wheel;
+    private Score _score;
+    private Collider2D _collider;
     private int _quantity;
 
-    public Collider2D Collider2D { get; }
+    public int GetQuantity() => _quantity;
 
     private void Start()
     {
+        GameObject obj = GameObject.Find(nameof(Score));
+        _score = obj.GetComponent<Score>();
+
         GenerateQuantity();
     }
 
@@ -22,8 +27,9 @@ public class Coin : MonoBehaviour
         _quantityText.text = _quantity.ToString();
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D()
     {
         Debug.Log(_quantity);
+        _score.AddScore(_quantity);
     }
 }
