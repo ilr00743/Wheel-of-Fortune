@@ -20,7 +20,7 @@ public class Wheel : MonoBehaviour
         {
             _isFirstSpin = false;
             _picker.enabled = false;
-            _speed = Random.Range(800, 2500);
+            _speed = Random.Range(500, 2500);
             _spinButton.gameObject.SetActive(false);
         }
 
