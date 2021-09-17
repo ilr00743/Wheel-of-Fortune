@@ -2,7 +2,7 @@
 
 public static class BigNumberConverter 
 {
-    private static string[] suffixes = new[]{"", "K", "M", "B", "T"};
+    private static string[] _suffixes = new[]{"", "K", "M", "B", "T"};
 
     public static string ConvertNumber(float number)
     {
@@ -14,12 +14,12 @@ public static class BigNumberConverter
         number = Mathf.Round(number);
 
         int i = 0;
-        while (i + 1 < suffixes.Length && number >= 1000f)
+        while (i + 1 < _suffixes.Length && number >= 1000f)
         {
             number /= 1000f;
             i++;
         }
 
-        return "Score: $" + number.ToString("#.##") + suffixes[i];
+        return "Score: $" + number.ToString("#.##") + _suffixes[i];
     }
 }
