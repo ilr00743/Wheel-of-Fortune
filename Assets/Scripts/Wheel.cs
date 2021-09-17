@@ -8,11 +8,7 @@ public class Wheel : MonoBehaviour
     private bool _canSpin = false;
     private float _speed = 0;
     private bool _isFirstSpin = true;
-
-    private void Start()
-    {
-        //_picker = GetComponent<Picker>().GetComponent<BoxCollider2D>();
-    }
+    
     private void Update()
     {
         RotateWheel(_canSpin);
@@ -31,6 +27,7 @@ public class Wheel : MonoBehaviour
         if (_speed <= 0)
         {
             _speed = 0;
+
             if (_isFirstSpin == false)
             {
                 _picker.enabled = true;
@@ -38,7 +35,7 @@ public class Wheel : MonoBehaviour
             _spinButton.gameObject.SetActive(true);
         }
 
-        transform.Rotate(Vector3.forward * _speed * Time.deltaTime);
+        transform.Rotate(Vector3.forward * (_speed * Time.deltaTime));
         _speed -= 10;
     }
 }

@@ -1,27 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Sector : MonoBehaviour
 {
     [SerializeField] private TMP_Text _quantityText;
-    [SerializeField] private Wheel _wheel;
-    private Score _score;
-    private Collider2D _collider;
+    [SerializeField] private Score _score;
     private int _quantity;
 
-    public int GetQuantity() => _quantity;
-
-    private void Start()
+    private void Awake()
     {
         GameObject obj = GameObject.Find(nameof(Score));
         _score = obj.GetComponent<Score>();
+    }
 
+    private void Start()
+    {
         GenerateQuantity();
     }
 
-    public void GenerateQuantity()
+    private void GenerateQuantity()
     {
         _quantity = Random.Range(10, 1001) * 100;
         _quantityText.text = _quantity.ToString();
@@ -29,7 +26,6 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter2D()
     {
-        Debug.Log(_quantity);
         _score.AddScore(_quantity);
     }
 }
