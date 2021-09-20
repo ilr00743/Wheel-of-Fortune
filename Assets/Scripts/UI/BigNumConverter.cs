@@ -2,7 +2,7 @@
 
 public static class BigNumberConverter 
 {
-    private static string[] _suffixes = {"", "K", "M", "B", "T"};
+    private static readonly string[] _suffixes = {"", "K", "M", "B", "T"};
 
     public static string ConvertNumber(float number)
     {

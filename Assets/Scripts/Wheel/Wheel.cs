@@ -6,7 +6,7 @@ public class Wheel : MonoBehaviour
     [SerializeField] private Button _spinButton;
     [SerializeField] private BoxCollider2D _picker;
     private bool _canSpin = false;
-    private float _speed = 0;
+    private float _speed;
     private bool _isFirstSpin = true;
     
     private void Update()
